@@ -1,11 +1,17 @@
+let userColor = (255);
+
 function setup() {
- createCanvas(1000, 1000);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-if (mouseIsPressed) {
-  fill(255, 255, 0, 40);
-} else{
-  fill(128, 0, 128, 40);
-} ellipse(mouseX, mouseY, 80, 80);
+  fill(userColor);
+  ellipse(mouseX, mouseY, 80, 80);
+}
+
+function mousePressed() {
+  let input = prompt("Enter a Color!");
+  if (input) {
+    userColor = input;
+  }
 }
